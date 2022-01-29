@@ -15,3 +15,10 @@ fix = [
   "bonnie build",
   "bonnie run"
 ]
+rebuild = [
+  "docker rm pde",
+  "git stash",
+  "git pull",
+  "bonnie build",
+  "bonnie run"
+]

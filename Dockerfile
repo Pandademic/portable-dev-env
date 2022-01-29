@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S --needed - < buildfiles/pkglist.txt--noconfirm
+RUN pacman -S --needed - < buildfiles/pkglist.txt --noconfirm
 
 ENV CONTEXT=portable-dev-env
 

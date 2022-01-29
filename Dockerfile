@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S neovim ruby curl zsh make sudo git wget vim --noconfirm
+RUN pacman -S neovim ruby curl zsh make sudo git wget vim fzf bat fd gcc swift lua luajit--noconfirm
 
 ENV CONTEXT=portable-dev-env
 

@@ -4,9 +4,9 @@ RUN pacman -Syu --noconfirm
 
 RUN pacman -S neovim git ruby curl zsh make --noconfirm
 
-RUN /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+#RUN /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-RUN brew tap homebrew/cask
+#RUN brew tap homebrew/cask
 
 ENV CONTEXT=portable-dev-env
 

@@ -10,6 +10,8 @@ RUN useradd --create-home atha
 
 RUN su atha
 
+RUN whoami
+
 RUN makepkg -si
 
 RUN exit

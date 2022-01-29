@@ -14,7 +14,4 @@ RUN useradd --create-home postman
 RUN chpasswd <pass.txt
 
 RUN su postman
-
-RUN hostnamectl set-hostname lps
-
 CMD zsh

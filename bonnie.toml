@@ -2,4 +2,4 @@ version = "0.3.2"
 
 [scripts]
 build = "docker build -t portable-dev-env ."
-run = "docker run -ti -v $$(pwd):/ portable-dev-env --net host -v ~/.abs_history:/root/.abs_history --name abs --rm abs"
+run = "docker run --net host"

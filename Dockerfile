@@ -11,7 +11,7 @@ WORKDIR /
 
 RUN useradd postman
 
-RUN chpasswd <pass.txt
+RUN chpasswd <pde/pass.txt
 
 RUN usermod -d /pde/postman postman
 

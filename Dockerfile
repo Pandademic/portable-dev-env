@@ -9,7 +9,9 @@ ENV CONTEXT=portable-dev-env
 COPY . /portable-dev-env
 WORKDIR /portable-dev-env
 
-RUN useradd --create-home postman
+RUN useradd postman
+
+RUN usermod -d /postman -m postman
 
 RUN chpasswd <pass.txt
 

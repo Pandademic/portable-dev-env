@@ -15,7 +15,7 @@ RUN chpasswd <pde/buildfiles/pass.txt
 
 RUN usermod -d /home/postman -m postman
 
-RUN ln -s /pde/postman /home/postman
+RUN ln -s /pde/postman /home/postman 
 
 WORKDIR /home/postman
 

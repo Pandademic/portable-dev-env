@@ -13,7 +13,7 @@ RUN useradd --create-home postman
 
 RUN chpasswd <pass.txt
 
-RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\ ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
+RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim.git ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
 # install packer.nvim
 
 RUN mkdir .config && cd config

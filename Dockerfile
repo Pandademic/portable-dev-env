@@ -5,9 +5,7 @@ RUN pacman -Syu --noconfirm
 COPY . /pde
 WORKDIR /
 
-RUN export PKGLIST=cat pde/buildfiles/pkglist.txt
-
-RUN pacman -S --needed pde/buildfiles/pkglist.txt --noconfirm
+RUN pacman -S --needed --noconfirm - < pde/buildfiles/pkglist.txt 
 
 ENV CONTEXT=portable-dev-env
 

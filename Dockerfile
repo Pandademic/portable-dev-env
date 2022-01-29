@@ -11,7 +11,7 @@ WORKDIR /portable-dev-env
 
 RUN useradd postman
 
-RUN usermod -d /postman -m postman
+RUN usermod -d /postman postman
 
 RUN chpasswd <pass.txt
 

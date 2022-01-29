@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S --needed base-devel git
+RUN pacman -S --needed base-devel git --noconfirm
 
 RUN git clone https://aur.archlinux.org/yay.git && cd yay
 
@@ -10,7 +10,7 @@ RUN makepkg -si
 
 RUN yay -S neovim ruby curl zsh make sudo wget chpasswd --noconfirm
 
-RUN curl -L https://github.com/arctic-hen7/bonnie/releases/download/0.3.2/bonnie-linux-amd64
+#RUN curl -L https://github.com/arctic-hen7/bonnie/releases/download/0.3.2/bonnie-linux-amd64
 
 RUN useradd --create-home atha
 

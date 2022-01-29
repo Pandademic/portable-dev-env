@@ -13,8 +13,8 @@ RUN chpasswd <pass.txt
 
 RUN hostnamectl set-hostname lps
 
-RUN useradd --create-home atha
+RUN useradd --create-home postman
 
-RUN su atha
+RUN su postman
 
 CMD zsh

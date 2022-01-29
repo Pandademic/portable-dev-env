@@ -13,5 +13,8 @@ RUN useradd --create-home postman
 
 RUN chpasswd <pass.txt
 
-RUN su postman
+#RUN su postman
+
+RUN chmod +x postinstall.sh
+
 CMD zsh

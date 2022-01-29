@@ -6,4 +6,4 @@ build = [
   "git pull",
   "docker build -t portable-dev-env ."
 ]
-run = "docker run -it --name pde portable-dev-env /bin/zsh  "
+run = "docker run -it --name pde portable-dev-env /bin/zsh  --hostname lps"

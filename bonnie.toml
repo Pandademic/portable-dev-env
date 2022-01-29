@@ -2,4 +2,4 @@ version = "0.3.2"
 
 [scripts]
 build = "docker build -t portable-dev-env ."
-run = "docker run it portable-dev-env /bin/zsh"
+run = "docker run -it portable-dev-env /bin/zsh"

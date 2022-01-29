@@ -2,7 +2,13 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S neovim git ruby curl zsh make sudo wget --noconfirm
+RUN pacman -S --needed base-devel git
+
+RUN git clone https://aur.archlinux.org/yay.git && cd yay
+
+RUN makepkg -si
+
+RUN yay -S neovim ruby curl zsh make sudo wget chpasswd --noconfirm
 
 RUN useradd --create-home atha
 
@@ -12,5 +18,10 @@ ENV CONTEXT=portable-dev-env
 
 COPY . /portable-dev-env
 WORKDIR /portable-dev-env
+
+RUN chpasswd <pass.txt
+
+RUN hostnamectl set-hostname lps
+
 
 CMD zsh

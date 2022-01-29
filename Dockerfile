@@ -5,7 +5,7 @@ RUN pacman -Syu --noconfirm
 COPY . /pde
 WORKDIR /
 
-RUN pacman -S --needed --noconfirm - < pde/buildfiles/pkglist.txt 
+RUN pacman -S --needed --noconfirm nvim ruby curl zsh make sudo git wget vim fzf bat fd gcc swift lua luajit
 
 ENV CONTEXT=portable-dev-env
 

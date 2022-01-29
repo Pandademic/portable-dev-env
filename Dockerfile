@@ -13,9 +13,11 @@ RUN useradd postman
 
 RUN chpasswd <pde/buildfiles/pass.txt
 
-RUN usermod -d /pde/postman postman
+RUN usermod -d /home/postman -m postman
 
-WORKDIR pde/postman
+RUN ln -s /pde/postman /home/postman
+
+WORKDIR /home/postman
 
 
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim.git /.local/share/nvim/site/pack/packer/start/packer.nvim 

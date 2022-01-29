@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S neovim ruby curl zsh make sudo git wget vim-tiny--noconfirm
+RUN pacman -S neovim ruby curl zsh make sudo git wget vim --noconfirm
 
 ENV CONTEXT=portable-dev-env
 

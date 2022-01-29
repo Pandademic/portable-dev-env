@@ -15,6 +15,6 @@ RUN chpasswd <pass.txt
 
 #RUN su postman
 
-RUN chmod +x postinstall.sh
+RUN chmod +x post.sh
 
 CMD zsh

@@ -16,9 +16,13 @@ RUN chpasswd <pass.txt
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim.git ~/.local/share/nvim/site/pack/packer/start/packer.nvim 
 # install packer.nvim
 
-RUN mkdir .config && cd .config
+RUN mkdir .config 
 
-RUN mkdir nvim && cd nvim
+RUN cd .config
+
+RUN mkdir nvim 
+
+RUN cd nvim
 
 RUN git clone https://github.com/Pandademic/waffle-vim.git lua
 

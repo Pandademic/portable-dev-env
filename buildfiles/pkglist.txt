@@ -1,1 +1,1 @@
-neovim ruby curl zsh make sudo git wget vim fzf bat fd gcc swift lua luajit
+neovim 

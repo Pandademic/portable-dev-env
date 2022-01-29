@@ -2,4 +2,4 @@ version = "0.3.2"
 
 [scripts]
 build = "docker build -t portable-dev-env ."
-run = "docker run -ti -v $(pwd):/portable-dev-env --net host --name pde --rm pde"
+run = "docker run -ti -v $(pwd):/portable-dev-env --net host --name abs --rm abs"

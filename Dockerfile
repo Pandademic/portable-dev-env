@@ -2,11 +2,11 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S neovim git ruby curl zsh make --noconfirm
+RUN pacman -S neovim git ruby curl zsh make sudo wget --noconfirm
 
-#RUN /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+RUN useradd --create-home atha
 
-#RUN brew tap homebrew/cask
+RUN wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
 
 ENV CONTEXT=portable-dev-env
 

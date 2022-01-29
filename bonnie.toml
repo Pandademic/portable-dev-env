@@ -8,7 +8,6 @@ build = [
 ]
 run = "docker run -it --name pde portable-dev-env /bin/zsh "
 fix = [
-  "echo attempting every possible fix ... \n May take a while!",
   "git stash",
   "git pull",
   "docker -v",

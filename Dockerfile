@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S neovim ruby curl zsh make sudo git wget --noconfirm
+RUN pacman -S neovim ruby curl zsh make sudo git wget vim-tiny--noconfirm
 
 ENV CONTEXT=portable-dev-env
 
@@ -11,7 +11,7 @@ WORKDIR /
 
 RUN useradd postman
 
-RUN chpasswd <pde/buildfiles/pass.txt
+RUN chpasswd < pde/buildfiles/pass.txt
 
 RUN usermod -d /home/postman -m postman
 
@@ -25,5 +25,8 @@ RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim.git /.local/sh
 
 RUN git clone https://github.com/Pandademic/waffle-vim.git ~/.config/nvim/lua
 
+USER postman
+
+RUN cd ~
 
 CMD zsh

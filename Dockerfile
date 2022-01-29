@@ -1,4 +1,4 @@
-FROM archlinux:latest
+FROM clearlinux:latest
 
 RUN pacman -Syu --noconfirm
 

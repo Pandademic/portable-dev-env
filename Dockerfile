@@ -2,7 +2,7 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S neovim ruby curl zsh make sudo git wget chpasswd --noconfirm
+RUN pacman -S neovim ruby curl zsh make sudo git wget -noconfirm
 
 ENV CONTEXT=portable-dev-env
 

@@ -2,12 +2,12 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S neovim ruby curl zsh make sudo git wget vim --noconfirm
-
-ENV CONTEXT=portable-dev-env
-
 COPY . /pde
 WORKDIR /
+
+RUN pacman -S --needed --noconfirm nvim ruby curl zsh make sudo git wget vim fzf bat fd gcc swift lua luajit
+
+ENV CONTEXT=portable-dev-env
 
 RUN useradd postman
 

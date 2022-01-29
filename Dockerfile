@@ -2,12 +2,12 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S --needed - < buildfiles/pkglist.txt --noconfirm
-
-ENV CONTEXT=portable-dev-env
-
 COPY . /pde
 WORKDIR /
+
+RUN pacman -S --needed - < pde/buildfiles/pkglist.txt --noconfirm
+
+ENV CONTEXT=portable-dev-env
 
 RUN useradd postman
 

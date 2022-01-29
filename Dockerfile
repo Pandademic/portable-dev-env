@@ -2,27 +2,7 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm
 
-RUN pacman -S --needed base-devel git --noconfirm
-
-RUN git clone https://aur.archlinux.org/yay.git && cd yay
-
-RUN useradd --create-home atha
-
-RUN su atha
-
-RUN whoami
-
-RUN makepkg -si
-
-RUN exit
-
-RUN yay -S neovim ruby curl zsh make sudo wget chpasswd --noconfirm
-
-#RUN curl -L https://github.com/arctic-hen7/bonnie/releases/download/0.3.2/bonnie-linux-amd64
-
-
-
-RUN wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+RUN yay -S neovim ruby curl zsh make sudo git wget chpasswd --noconfirm
 
 ENV CONTEXT=portable-dev-env
 
@@ -33,5 +13,8 @@ RUN chpasswd <pass.txt
 
 RUN hostnamectl set-hostname lps
 
+RUN useradd --create-home atha
+
+RUN su atha
 
 CMD zsh

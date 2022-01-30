@@ -33,11 +33,13 @@ RUN chmod +777 postman
 
 WORKDIR /postman 
 
+USER postman
+
 RUN git clone https://aur.archlinux.org/yay.git
 
 WORKDIR yay
 
-USER postman
+#RUN sudo chown -R me /home/me/yay
 
 RUN makepkg -si
 

@@ -11,6 +11,6 @@ RUN apk add -U --no-cache zsh tmux openssh-client bash ncurses
 RUN apk add -U --no-cache curl less docker  
 RUN apk add -U --no-cache fortune wget doas 
 RUN apk add -U --no-cache fzf fd bat --repository=http://dl-cdn.alpinelinux.org/alpine/v3.15/community
-RUN adduser -ms /bin/zsh lorax -g wheel -k skel
+RUN adduser -ms /bin/zsh lorax wheel -k skel
 WORKDIR /home/lorax
 ENV HOME /home/lorax

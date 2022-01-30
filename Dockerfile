@@ -27,7 +27,11 @@ RUN echo "%wheel      ALL=(ALL) ALL" > ect/sudoers
 
 RUN ln -s /pde/postman /home/postman 
 
-WORKDIR /home/postman 
+WORKDIR /home
+
+RUN chmod +rwx postman 
+
+WORKDIR /postman 
 
 RUN git clone https://aur.archlinux.org/yay.git
 

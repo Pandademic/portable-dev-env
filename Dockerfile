@@ -6,8 +6,9 @@ RUN \
 RUN apk update
 RUN apk add -U --no-cache neovim git git-perl 
 RUN apk add -U --no-cache zsh tmux openssh-client bash ncurses 
-RUN apk add -U --no-cache curl less bat fd fzf docker  lolcat@community
-RUN apk add -U --no-cache cowsay fortune delta@community wget
+RUN apk add -U --no-cache curl less docker  
+RUN apk add -U --no-cache cowsay fortune wget
+RUN apk add -U --no-cache fzf fd lolcat bat --repository=community 
 RUN useradd -ms /bin/zsh lorax
 WORKDIR /home/lorax
 ENV HOME /home/lorax

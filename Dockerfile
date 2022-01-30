@@ -1,5 +1,5 @@
 FROM alpine:latest
-COPY addcomrepo.sh 
+COPY addcomrepo.sh addcomrepo.sh
 RUN chmod +x addcomrepo.sh
 RUN ./addcomrepo.sh
 RUN apk add -U --no-cache \

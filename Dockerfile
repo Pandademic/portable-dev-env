@@ -31,7 +31,7 @@ WORKDIR /home
 
 RUN chmod +777 postman 
 
-RUN chown -R postman /postman/
+RUN chown -R postman /postman
 
 WORKDIR /postman 
 

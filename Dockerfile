@@ -31,11 +31,15 @@ WORKDIR /home
 
 RUN chmod +777 postman 
 
+RUN chown -R postman /postman/
+
 WORKDIR /postman 
 
 USER postman
 
 RUN git clone https://aur.archlinux.org/yay.git
+
+RUN sudo chown -R postman /home/postman/yay
 
 WORKDIR yay
 

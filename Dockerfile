@@ -29,7 +29,7 @@ RUN ln -s /pde/postman /home/postman
 
 WORKDIR /home
 
-RUN chmod +rwx postman 
+RUN chmod +777 postman 
 
 WORKDIR /postman 
 
@@ -37,9 +37,7 @@ RUN git clone https://aur.archlinux.org/yay.git
 
 WORKDIR yay
 
-USER postman
-
-RUN makepkg -si
+RUN makepkg -force -si
 
 WORKDIR /home/postman
 

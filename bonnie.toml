@@ -6,7 +6,7 @@ build = [
   "git pull",
   "docker build -t portable-dev-env ."
 ]
-run.cmd = "docker run -it --name pde portable-dev-env -v /var/run/docker.sock:/var/run/docker.sock /bin/zsh "
+run.cmd = "docker run -it --name pde portable-dev-env /bin/zsh "
 rebuild.cmd = [
   "docker rm pde",
   "git stash",

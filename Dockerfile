@@ -37,7 +37,9 @@ RUN git clone https://aur.archlinux.org/yay.git
 
 WORKDIR yay
 
-RUN makepkg -force -si
+USER postman
+
+RUN makepkg -si
 
 WORKDIR /home/postman
 

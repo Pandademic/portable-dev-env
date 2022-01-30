@@ -27,22 +27,25 @@ RUN echo "%wheel      ALL=(ALL) ALL" > ect/sudoers
 
 RUN ln -s /pde/postman /home/postman 
 
-WORKDIR /home/postman
-
-USER postman 
+WORKDIR /home/postman 
 
 RUN git clone https://aur.archlinux.org/yay.git
 
 WORKDIR yay
 
+USER postman
+
 RUN makepkg -si
+
+WORKDIR /home/postman
+
+USER root
 
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim.git /.local/share/nvim/site/pack/packer/start/packer.nvim 
 # install packer.nvim
 
 RUN git clone https://github.com/Pandademic/waffle-vim.git ~/.config/nvim/lua
 
-USER root
 
 RUN yay -S nvim ruby curl zsh make wget vim fzf bat fd gcc swift lua luajit
 

@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN echo "http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/main \n http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/community \n http://dl-cdn.alpinelinux.org/alpine/edge/testing " > /etc/apk/repositories
+RUN echo -e "http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/main \n http://dl-cdn.alpinelinux.org/alpine/v$(cat /etc/alpine-release | cut -d'.' -f1,2)/community \n http://dl-cdn.alpinelinux.org/alpine/edge/testing " > /etc/apk/repositories
 RUN apk update
 RUN apk add -U --no-cache \
     neovim git git-perl \

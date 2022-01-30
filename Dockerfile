@@ -17,6 +17,12 @@ RUN chpasswd < pde/buildfiles/pass.txt
 
 RUN usermod -d /home/postman -m postman
 
+WORKDIR ect
+
+RUN touch sudoers
+
+WORKDIR /
+
 RUN echo "%wheel      ALL=(ALL) ALL" > ect/sudoers
 
 RUN ln -s /pde/postman /home/postman 

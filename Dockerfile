@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN echo -e "http://dl-cdn.alpinelinux.org/alpine/v3.15/main\n http://dl-cdn.alpinelinux.org/alpine/v3.15/community/x86_64/APKINDEX.tar.gz\n http://dl-cdn.alpinelinux.org/alpine/edge/testing" > /etc/apk/repositories
+COPY apk_repos /etc/apk/repositories
 RUN apk update
 RUN apk add -U --no-cache neovim git git-perl 
 RUN apk add -U --no-cache zsh tmux openssh-client bash ncurses 

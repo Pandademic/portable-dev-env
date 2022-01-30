@@ -1,6 +1,8 @@
 FROM alpine:latest
-RUN sed -e 's;^#http\(.*\)/v3.15/community;http\1/v3.6/community;g' \
-      -i /etc/apk/repositories
+RUN \
+    echo "@main http://dl-cdn.alpinelinux.org/alpine/v3.15/main" >> /etc/apk/repositories && \
+    echo "@community http://dl-cdn.alpinelinux.org/alpine/v3.15/community" >> /etc/apk/repositories && \
+    echo "@edge http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 RUN apk update
 RUN apk add -U --no-cache neovim git git-perl 
 RUN apk add -U --no-cache zsh tmux openssh-client bash ncurses 

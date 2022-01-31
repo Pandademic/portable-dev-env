@@ -16,6 +16,11 @@ RUN adduser -s /bin/zsh -k skel  -D lorax wheel
 ENV HOME /home/lorax
 WORKDIR /home/lorax
 USER lorax
+# build neovim from source
+#RUN git clone https://github.com/neovim/neovim
+#WORKDIR neovim
+#RUN make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=$HOME/bin/nvim install
+#WORKDIR ~
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 WORKDIR .config/nvim

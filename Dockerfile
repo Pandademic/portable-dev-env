@@ -15,3 +15,9 @@ RUN adduser -s /bin/zsh -k skel  -D lorax wheel
 RUN chpasswd <pass.txt
 WORKDIR /home/lorax
 ENV HOME /home/lorax
+
+# setup env
+# Install Tmux Plugin Manager
+RUN git clone https://github.com/tmux-plugins/tpm .tmux/plugins/tpm
+# Install plugins
+RUN .tmux/plugins/tpm/bin/install_plugins

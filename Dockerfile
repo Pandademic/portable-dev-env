@@ -18,6 +18,5 @@ WORKDIR /home/lorax
 USER lorax
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
- RUN mkdir .config
 WORKDIR .config/nvim
 RUN git clone https://github.com/Pandademic/waffle-vim.git lua

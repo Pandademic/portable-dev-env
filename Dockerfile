@@ -1,5 +1,5 @@
 FROM alpine:latest
-COPY . .
+COPY . pde
 WORKDIR /
 RUN \
     echo "@main http://dl-cdn.alpinelinux.org/alpine/v3.15/main" >> /etc/apk/repositories && \

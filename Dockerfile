@@ -15,3 +15,6 @@ RUN adduser -s /bin/zsh -k skel  -D lorax wheel
 RUN chpasswd <pass.txt
 ENV HOME /home/lorax
 WORKDIR /home/lorax
+USER lorax
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim

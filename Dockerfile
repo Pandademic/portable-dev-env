@@ -13,11 +13,12 @@ RUN apk add -U --no-cache fortune wget doas
 RUN apk add -U --no-cache fzf fd bat --repository=http://dl-cdn.alpinelinux.org/alpine/v3.15/community
 RUN adduser -s /bin/zsh -k skel  -D lorax wheel
 RUN chpasswd <pass.txt
-WORKDIR /home/lorax
 ENV HOME /home/lorax
+WORKDIR /home/lorax
 
+RUN git clone https://github.com/tmux-plugins/tpm .tmux/plugins/tpm
 # setup env
 # Install Tmux Plugin Manager
-RUN git clone https://github.com/tmux-plugins/tpm .tmux/plugins/tpm
+
 # Install plugins
 RUN .tmux/plugins/tpm/bin/install_plugins

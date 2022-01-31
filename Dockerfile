@@ -12,7 +12,6 @@ RUN apk add -U --no-cache curl less docker shadow
 RUN apk add -U --no-cache fortune wget doas 
 RUN apk add -U --no-cache fzf fd bat neovim --repository=http://dl-cdn.alpinelinux.org/alpine/v3.15/community
 RUN adduser -s /bin/zsh -k skel  -D lorax wheel
-RUN chpasswd < pass.txt
 ENV HOME /home/lorax
 WORKDIR /home/lorax
 USER lorax
@@ -20,3 +19,4 @@ RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 WORKDIR .config/nvim
 RUN git clone https://github.com/Pandademic/waffle-vim.git lua
+USER root

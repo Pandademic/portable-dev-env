@@ -11,6 +11,7 @@ RUN apk add -U --no-cache zsh tmux openssh-client bash ncurses
 RUN apk add -U --no-cache curl less docker shadow
 RUN apk add -U --no-cache fortune wget doas 
 RUN apk add -U --no-cache fzf fd bat neovim --repository=http://dl-cdn.alpinelinux.org/alpine/v3.15/community
+RUN apk add build-base cmake automake autoconf libtool pkgconf coreutils curl unzip gettext-tiny-dev
 RUN adduser -s /bin/zsh -k skel  -D lorax wheel
 ENV HOME /home/lorax
 WORKDIR /home/lorax

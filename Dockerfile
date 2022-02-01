@@ -6,7 +6,6 @@ RUN \
     echo "@community http://dl-cdn.alpinelinux.org/alpine/v3.15/community" >> /etc/apk/repositories && \
     echo "@edge http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 RUN apk update
-RUN rmdir etc/skel
 COPY skel etc/skel
 RUN apk add -U --no-cache git git-perl sudo
 RUN apk add -U --no-cache zsh tmux openssh-client bash ncurses 

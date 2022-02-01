@@ -1,2 +1,2 @@
 lua require('waffle')
-set shada = NONE
+set shada="NONE" 

@@ -16,3 +16,9 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 .config/nvim
 git clone https://github.com/Pandademic/waffle-vim.git lua
 cd /
+echo "Password changing time !"
+echo "first ... root!"
+passwd
+echo "next .. LOrax"
+passwd lorax
+echo "Okay then .. we should be good"

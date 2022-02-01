@@ -6,6 +6,8 @@ RUN \
     echo "@community http://dl-cdn.alpinelinux.org/alpine/v3.15/community" >> /etc/apk/repositories && \
     echo "@edge http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
 RUN apk update
+RUN rmdir etc/skel
+COPY skel etc/skel
 RUN apk add -U --no-cache git git-perl sudo
 RUN apk add -U --no-cache zsh tmux openssh-client bash ncurses 
 RUN apk add -U --no-cache curl less docker shadow
@@ -16,11 +18,6 @@ RUN adduser -s /bin/zsh -k skel  -D lorax wheel
 ENV HOME /home/lorax
 WORKDIR /home/lorax
 USER lorax
-# build neovim from source
-#RUN git clone https://github.com/neovim/neovim
-#WORKDIR neovim
-#RUN make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=$HOME/bin/nvim install
-#WORKDIR ~
 RUN git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 WORKDIR .config/nvim

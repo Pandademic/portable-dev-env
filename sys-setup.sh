@@ -19,6 +19,8 @@ cd /
 echo "Password changing time !"
 echo "first ... root!"
 passwd
-echo "next .. LOrax"
+echo "next .. Lorax"
 passwd lorax
+echo "installing abs"
+bash <(curl https://www.abs-lang.org/installer.sh)
 echo "Okay then .. we should be good"

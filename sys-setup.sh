@@ -24,9 +24,10 @@ echo "next .. Lorax"
 passwd lorax
 echo "installing abs"
 curl -O https://www.abs-lang.org/installer.sh
-chmod +x install.sh
-./install.sh
-rm install.sh
+chmod +x installer.sh
+./installer.sh
+rm installer.sh
+cp abs bin
 echo "copying the bin directory to lorax"
 cp bin/* ~/bin
 echo "done!"

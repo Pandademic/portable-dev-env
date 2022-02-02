@@ -6,6 +6,7 @@ apk add -U --no-cache fzf fd bat neovim --repository=http://dl-cdn.alpinelinux.o
 echo "getting the extra packages"
 apk add -U --no-cache curl less docker shadow 
 apk add -U --no-cache fortune wget doas go
+apk add build-base cmake automake autoconf libtool pkgconf unzip gettext-tiny-dev
 echo "giving lorax sudo permsions"
 adduser lorax wheel
 echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel

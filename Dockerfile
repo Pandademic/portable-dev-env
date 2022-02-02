@@ -14,4 +14,3 @@ ENV HOME /home/lorax
 WORKDIR /
 COPY sys-setup.sh /home/lorax
 USER lorax
-USER root

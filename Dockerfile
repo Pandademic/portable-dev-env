@@ -12,6 +12,7 @@ RUN apk add -U --no-cache zsh tmux openssh-client bash ncurses coreutils
 #RUN apk add build-base cmake automake autoconf libtool pkgconf coreutils curl unzip gettext-tiny-dev
 RUN adduser -s /bin/zsh lorax -D
 ENV HOME /home/lorax
-WORKDIR /home/lorax
+WORKDIR /
+COPY sys-setup.sh /home/lorax
 USER lorax
 USER root

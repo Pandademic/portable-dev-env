@@ -22,5 +22,8 @@ passwd
 echo "next .. Lorax"
 passwd lorax
 echo "installing abs"
-bash <(curl https://www.abs-lang.org/installer.sh)
+curl -O https://www.abs-lang.org/installer.sh
+chmod +x install.sh
+./install.sh
+rm install.sh
 echo "Okay then .. we should be good"

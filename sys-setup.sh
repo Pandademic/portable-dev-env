@@ -30,5 +30,6 @@ rm installer.sh
 cp abs bin
 echo "copying the bin directory to lorax"
 cp bin/* ~/bin
+cp /usr/bin/git bin
 echo "done!"
 echo "we should be good to go!"

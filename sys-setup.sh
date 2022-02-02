@@ -27,4 +27,7 @@ curl -O https://www.abs-lang.org/installer.sh
 chmod +x install.sh
 ./install.sh
 rm install.sh
-echo "Okay then .. we should be good"
+echo "copying the bin directory to lorax"
+cp bin/* ~/bin
+echo "done!"
+echo "we should be good to go!"
